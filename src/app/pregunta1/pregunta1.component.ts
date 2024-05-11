@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {RouterOutlet} from "@angular/router";
+import {NavegacionComponent} from "../navegacion/navegacion.component";
 
 @Component({
   selector: 'app-pregunta1',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterOutlet, NavegacionComponent],
   templateUrl: './pregunta1.component.html',
   styleUrl: './pregunta1.component.scss'
 })
