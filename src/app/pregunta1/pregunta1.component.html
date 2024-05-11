@@ -16,7 +16,10 @@
     <hr>
     @if (mr) {
         <div class="alert alert-success" role="alert">
-            {{multiplicacion.resultado}}
+           El monto a pagar es {{multiplicacion.rsindescuento}} <br>
+            @if (multiplicacion.rcondescuento!= 0) {
+            Usted va a recibir un descuento del 20% y va a pagar {{multiplicacion.rcondescuento}}
+            }
         </div>
     }
     </div>
