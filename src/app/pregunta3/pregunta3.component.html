@@ -5,20 +5,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pregunta 3</title>
+    <title>Pregunta número  3</title>
 </head>
 <body>
     <div class="container">
         <div class="form-group">
-            <label for="precioUnitario">Precio Unitario:</label>
+            <label for="precioUnitario">Precio unitario:</label>
             <input type="number" id="precioUnitario" [(ngModel)]="precioUnitario">
         </div>
         <div class="form-group">
-            <label for="cantidad">Cantidad Adquirida:</label>
+            <label for="cantidad">Cantidad adquirida:</label>
             <input type="number" id="cantidad" [(ngModel)]="cantidad">
         </div>
         <div>
-            <button (click)="calcularPrecioTotal()">Calcular Precio Total</button>
+            <button (click)="calcularPrecioTotal()">Calcular el precio Total</button>
         </div>
         <div class="result" *ngIf="precioTotal !== undefined">
             <p>El cliente debe pagar: {{ precioTotal | currency:'USD':'symbol':'1.2-2' }}</p>
