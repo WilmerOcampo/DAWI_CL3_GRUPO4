@@ -1,0 +1,10 @@
+<app-navegacion></app-navegacion>
+<p>pregunta2 works!</p>
+<div class="mb-3">
+    <label for="montoPrestamo" class="form-label">Ingrese el monto del préstamo</label>
+    <input type="number" [(ngModel)]="montoPrestamo" class="form-control" id="montoPrestamo">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="calcularCuotas()">Calcular Cuotas</button>
+  <p>Número de cuotas: {{cuotas}}</p>
+  <p>Valor de cada cuota: {{valorCuota | currency}}</p>
+  <router-outlet></router-outlet>
