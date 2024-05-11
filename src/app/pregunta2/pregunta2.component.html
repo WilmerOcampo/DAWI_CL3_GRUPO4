@@ -1,5 +1,15 @@
 <app-navegacion></app-navegacion>
-<p>pregunta2 works!</p>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 2</title>
+</head>
+
+<div class="container">
+    <h2 style="text-align: center;">Pregunta 2</h2>
 <div class="mb-3">
     <label for="montoPrestamo" class="form-label">Ingrese el monto del préstamo</label>
     <input type="number" [(ngModel)]="montoPrestamo" class="form-control" id="montoPrestamo">
@@ -7,4 +17,5 @@
   <button type="submit" class="btn btn-primary" (click)="calcularCuotas()">Calcular Cuotas</button>
   <p>Número de cuotas: {{cuotas}}</p>
   <p>Valor de cada cuota: {{valorCuota | currency}}</p>
+</div>
   <router-outlet></router-outlet>
