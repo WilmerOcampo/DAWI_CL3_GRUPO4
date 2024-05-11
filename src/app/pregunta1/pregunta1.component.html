@@ -1,26 +1,30 @@
+<app-navegacion></app-navegacion>
 <div class="center-card" class="d-flex justify-content-center align-items-center">
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Producto</h5>
-        <div class="form-floating mb-3">
-          <input type="number" class="form-control" [(ngModel)] ="multiplicacion.precio" id="precio" placeholder="Ingrese el precio">
-          <label for="precio">Precio</label>
-        </div>
-        <div class="form-floating">
-          <input type="number" class="form-control" [(ngModel)] ="multiplicacion.cantidad" id="cantidad" placeholder="Ingrese la cantidad">
-          <label for="cantidad">Cantidad</label>
-        </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Producto</h5>
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" [(ngModel)]="multiplicacion.precio" id="precio"
+               placeholder="Ingrese el precio">
+        <label for="precio">Precio</label>
       </div>
-      <hr>
+      <div class="form-floating">
+        <input type="number" class="form-control" [(ngModel)]="multiplicacion.cantidad" id="cantidad"
+               placeholder="Ingrese la cantidad">
+        <label for="cantidad">Cantidad</label>
+      </div>
+    </div>
+    <hr>
     <button type="button" (click)="calcularMultiplicacion()" class="btn btn-primary">Calcular</button>
     <hr>
     @if (mr) {
-        <div class="alert alert-success" role="alert">
-           El monto a pagar es {{multiplicacion.rsindescuento}} <br>
-            @if (multiplicacion.rcondescuento!= 0) {
-            Usted va a recibir un descuento del 20% y va a pagar {{multiplicacion.rcondescuento}}
-            }
-        </div>
+      <div class="alert alert-success" role="alert">
+        El monto a pagar es {{ multiplicacion.rsindescuento }} <br>
+        @if (multiplicacion.rcondescuento != 0) {
+          Usted va a recibir un descuento del 20% y va a pagar {{ multiplicacion.rcondescuento }}
+        }
+      </div>
     }
-    </div>
   </div>
+</div>
+<router-outlet></router-outlet>
