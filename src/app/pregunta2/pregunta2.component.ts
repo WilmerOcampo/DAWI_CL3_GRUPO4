@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterOutlet } from '@angular/router';
+import { NavegacionComponent } from '../navegacion/navegacion.component';
 
 @Component({
   selector: 'app-pregunta2',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterOutlet, NavegacionComponent],
   templateUrl: './pregunta2.component.html',
   styleUrl: './pregunta2.component.scss'
 })
