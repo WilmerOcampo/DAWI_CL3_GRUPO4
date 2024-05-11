@@ -1,1 +1,14 @@
-<p>pregunta3 works!</p>
+<div>
+    <label for="precioUnitario">Precio Unitario:</label>
+    <input type="number" id="precioUnitario" [(ngModel)]="precioUnitario">
+</div>
+<div>
+    <label for="cantidad">Cantidad Adquirida:</label>
+    <input type="number" id="cantidad" [(ngModel)]="cantidad">
+</div>
+<div>
+    <button (click)="calcularPrecioTotal()">Calcular Precio Total</button>
+</div>
+<div *ngIf="precioTotal !== undefined">
+    <p>El cliente debe pagar: {{ precioTotal | currency:'USD':'symbol':'1.2-2' }}</p>
+</div>
